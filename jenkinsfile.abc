@@ -32,11 +32,6 @@ pipeline {
                         sh 'mvn findbugs:findbugs'
                     }
                 }
-                stage( 'sure' ) {
-                    steps {
-                        sh 'mvn surefire-report:report'
-                    }
-                }
                 stage( 'coverage_analysis' ) {
                     steps {
                         sh 'mvn cobertura:cobertura'
